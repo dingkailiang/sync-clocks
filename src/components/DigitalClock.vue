@@ -26,7 +26,6 @@ const period = computed(()=>props.time.getHours() >= 12 ? "PM" : "AM")
 
 <style scoped>
     .clock {
-        font-family: sans-serif;
         width: 400px;
         padding : 15px 10px;
         border : 3px solid #2E94E3;

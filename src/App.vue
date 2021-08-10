@@ -18,7 +18,9 @@
                     </el-card>
                 </el-col>
                 <el-col :span="12">
-                    <el-card header="Analog Clock"></el-card>
+                    <el-card header="Analog Clock">
+                        <analog-clock :time="time"></analog-clock>
+                    </el-card>
                 </el-col>
             </el-row>
         </el-main>
@@ -29,6 +31,8 @@
 import { ref } from "@vue/reactivity"
 import {ElContainer,ElHeader,ElMain,ElCard,ElRow,ElCol,ElTimePicker,ElFormItem,ElForm} from "element-plus"
 import DigitalClock from "./components/DigitalClock.vue"
+import AnalogClock from "./components/AnalogClock.vue"
+
 // Init time as current time
 const time = ref(new Date())
 
