@@ -13,7 +13,9 @@
             </el-form>
                 <el-row :gutter="30">
                 <el-col :span="12">
-                    <el-card header="Digital Clock"></el-card>
+                    <el-card header="Digital Clock">
+                        <digital-clock :time="time"></digital-clock>
+                    </el-card>
                 </el-col>
                 <el-col :span="12">
                     <el-card header="Analog Clock"></el-card>
@@ -26,6 +28,7 @@
 <script setup>
 import { ref } from "@vue/reactivity"
 import {ElContainer,ElHeader,ElMain,ElCard,ElRow,ElCol,ElTimePicker,ElFormItem,ElForm} from "element-plus"
+import DigitalClock from "./components/DigitalClock.vue"
 // Init time as current time
 const time = ref(new Date())
 
@@ -42,4 +45,19 @@ html {
 .el-header {
     border-bottom: 1px solid #dcdfe6
 }
+.el-card {
+    background-color: #10101E!important;
+    color: white !important;
+}
+
+.el-card__body {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.el-card__header {
+    border-bottom-color:#000000 !important;
+}
+
 </style>
