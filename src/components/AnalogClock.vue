@@ -33,6 +33,8 @@ const degrees = computed(()=>{
     const s = props.time.getSeconds()
     const m = props.time.getMinutes()
     const h = props.time.getHours() % 12
+
+    // Calculate degrees
     ret["hr"] = deg((s + m * 60 + h * 3600) / 43200)
     ret["mn"] = deg((s + m * 60) / 3600)
     ret["sc"] = deg(s / 60)
